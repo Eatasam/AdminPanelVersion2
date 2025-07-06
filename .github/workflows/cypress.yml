@@ -1,4 +1,4 @@
-name: Run Cypress Tests
+name: Cypress Tests
 
 on:
   push:
@@ -6,19 +6,18 @@ on:
   pull_request:
 
 jobs:
-  cypress-run:
+  test:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
-
-      - name: Use Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 18
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run all Cypress tests
-        run: npx cypress run
+          node-version: 20
+      - run: npm ci
+      - name: Run Cypress tests
+        uses: cypress-io/github-action@v6
+      - name: Upload Mochawesome Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: mochawesome-report
+          path: cypress/reports/
