@@ -4,10 +4,7 @@ module.exports = defineConfig({
   e2e: {
     reporter: 'mochawesome',
     reporterOptions: {
-      reportDir: 'cypress/reports/mochawesome',
-      overwrite: false,
-      html: true,
-      json: true
+      reportDir: 'cypress/reports'
     }
   }
 });
