@@ -1,0 +1,569 @@
+{
+  "stats": {
+    "suites": 9,
+    "tests": 10,
+    "passes": 10,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 10,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2025-07-06T08:38:17.480Z",
+    "end": "2025-07-06T08:40:17.112Z",
+    "duration": 119632
+  },
+  "results": [
+    {
+      "uuid": "1311f975-f642-4e8f-bfb0-d931165fdff3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\AddCustomer.cy.js",
+      "file": "cypress\\e2e\\AddCustomer.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "def8bfa1-c5eb-437a-95a0-7865c3578d06",
+          "title": "Customer Management",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add a new customer with random details",
+              "fullTitle": "Customer Management should add a new customer with random details",
+              "timedOut": null,
+              "duration": 7006,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.then(() => {\n  const randomFullName = generateRandomText(10);\n  const randomSuffix = generateRandomTextForEmail(2);\n  const randomEmail = `demo@marn.com.${randomSuffix}`;\n  const randomPhoneNumber = generateRandomPhoneNumber();\n  addCustomerPage.openAddCustomerForm();\n  addCustomerPage.fillCustomerDetails({\n    fullName: randomFullName,\n    email: randomEmail,\n    phone: randomPhoneNumber,\n    gender: 'female'\n  });\n  addCustomerPage.submit();\n});",
+              "err": {},
+              "uuid": "dcad4799-b401-4271-bee0-440e327cbb25",
+              "parentUUID": "def8bfa1-c5eb-437a-95a0-7865c3578d06",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dcad4799-b401-4271-bee0-440e327cbb25"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7006,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "927e74aa-5ff7-4ba7-87d3-f1dd96cb3f00",
+      "title": "",
+      "fullFile": "cypress\\e2e\\CreditCustomers.cy.js",
+      "file": "cypress\\e2e\\CreditCustomers.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "56c39c8e-8f4e-4f4d-82f5-c5fbcc035c9a",
+          "title": "Credit Customers Management",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add a new credit customer with random details",
+              "fullTitle": "Credit Customers Management should add a new credit customer with random details",
+              "timedOut": null,
+              "duration": 6407,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.then(() => {\n  const randomName = generateRandomText(10);\n  const randomEmail = `demo${generateRandomText(4)}@marn.sa.com`;\n  const randomPhone = generateRandomPhone();\n  creditCustomersPage.openCreditCustomersForm();\n  creditCustomersPage.fillCreditCustomerDetails({\n    name: randomName,\n    email: randomEmail,\n    phone: randomPhone\n  });\n});",
+              "err": {},
+              "uuid": "92cf0b1c-4a67-430b-b109-abc2f091c5df",
+              "parentUUID": "56c39c8e-8f4e-4f4d-82f5-c5fbcc035c9a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "92cf0b1c-4a67-430b-b109-abc2f091c5df"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6407,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "2966b097-7ba2-471e-8ce6-2196b8e88e55",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Locations.cy.js",
+      "file": "cypress\\e2e\\Locations.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c945692e-c18f-462a-b1ba-1e4dfef62b9a",
+          "title": "Locations Management",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add a new location with random details",
+              "fullTitle": "Locations Management should add a new location with random details",
+              "timedOut": null,
+              "duration": 9562,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const randomName = generateRandomText(10);\nconst randomCode = generateRandomText(20);\nconst randomEmail = `a${generateRandomText(3)}@a.com`;\nconst randomPhone = generateRandomPhone();\nconst randomAddress = generateRandomText(10);\nlocationsPage.openLocationsForm();\nlocationsPage.fillLocationDetails({\n  name: randomName,\n  code: randomCode,\n  email: randomEmail,\n  phone: randomPhone,\n  address: randomAddress,\n  description: 'karage services',\n  country: 'Saudi Arabia'\n});\nlocationsPage.submit();",
+              "err": {},
+              "uuid": "29471bbb-69db-48b8-a8a2-030a25e03013",
+              "parentUUID": "c945692e-c18f-462a-b1ba-1e4dfef62b9a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "29471bbb-69db-48b8-a8a2-030a25e03013"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9562,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "965749f5-5a19-4727-9073-e704a8719de0",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Login.cy.js",
+      "file": "cypress\\e2e\\Login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ca69bf76-152f-48f0-bccb-7833dd93835f",
+          "title": "User Authentication",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should allow a user to log in with valid credentials",
+              "fullTitle": "User Authentication should allow a user to log in with valid credentials",
+              "timedOut": null,
+              "duration": 3520,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('Credentials').then(data => {\n  const homepage = new _HomePage.default();\n  cy.visit('https://dashkarageuat.azurewebsites.net/login');\n  homepage.login(data.email, data.password);\n});",
+              "err": {},
+              "uuid": "cdfcc06a-655e-420a-8187-eb96e218e9dc",
+              "parentUUID": "ca69bf76-152f-48f0-bccb-7833dd93835f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cdfcc06a-655e-420a-8187-eb96e218e9dc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3520,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "15f04ffc-0714-46df-a760-bd6a3bf2d09b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\LoginWithAssert.cy.js",
+      "file": "cypress\\e2e\\LoginWithAssert.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "LoginWithAssert.cy.js",
+          "fullTitle": "LoginWithAssert.cy.js",
+          "timedOut": null,
+          "duration": 3915,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "/* ==== Generated with Cypress Studio ==== */\ncy.visit('http://dashkarageuat.azurewebsites.net/');\ncy.get('.btn-login').click();\ncy.get('.col-sm-10').click();\ncy.get('.ng-submitted > :nth-child(1) > .invalid-feedback').should('have.text', ' Email is required. ');\ncy.get('.password-container > .invalid-feedback').click();\ncy.get('.password-container > .invalid-feedback').should('have.text', ' Password is required. ');\ncy.get('#email').clear('demo@marn.com.sa');\ncy.get('#email').type('demo@marn.com.sa');\ncy.get('#password').type('Test@123');\ncy.get('#show-password').click();\ncy.get('.btn-login').click();\n/* ==== End Cypress Studio ==== */",
+          "err": {},
+          "uuid": "593a57a8-ed55-4cc3-9850-e70140706175",
+          "parentUUID": "15f04ffc-0714-46df-a760-bd6a3bf2d09b",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "593a57a8-ed55-4cc3-9850-e70140706175"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 3915,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "e6d8387c-c965-41a1-9673-8c3fa230bc63",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Product-Category.cy.js",
+      "file": "cypress\\e2e\\Product-Category.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "36a9db17-d99a-4492-88d4-09da6d8851e2",
+          "title": "Product Category Management",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add a new product category",
+              "fullTitle": "Product Category Management should add a new product category",
+              "timedOut": null,
+              "duration": 7285,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('Credentials').then(data => {\n  const productCategoryPage = new _ProductCategoryPage.default();\n  const name = generateRandomText(10);\n  productCategoryPage.visit();\n  productCategoryPage.login(data.email, data.password);\n  productCategoryPage.openProductCategory();\n  productCategoryPage.addCategory(name, 'car', 'testing', '1');\n  // Assert the new category appears\n  cy.contains(name).should('exist');\n});",
+              "err": {},
+              "uuid": "d2cdb7b3-9469-46a4-8252-a2efb2652be5",
+              "parentUUID": "36a9db17-d99a-4492-88d4-09da6d8851e2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d2cdb7b3-9469-46a4-8252-a2efb2652be5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7285,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "dfcf31b6-4750-4589-891f-1c34f553dfd1",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Product-Items.cy.js",
+      "file": "cypress\\e2e\\Product-Items.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "842a9e40-c3c8-4b02-9eed-ba2f66571d0d",
+          "title": "Product Items Management",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add a package and assert it by name",
+              "fullTitle": "Product Items Management should add a package and assert it by name",
+              "timedOut": null,
+              "duration": 9193,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const productItemsPage = new _ProductItemsPage.default();\nconst englishName = generateRandomText(10);\nconst nameOnReceipt = generateRandomText(10);\nproductItemsPage.visit();\nproductItemsPage.login('demo@marn.com.sa', 'Test@123');\nproductItemsPage.openPackagesSection();\nproductItemsPage.addPackage({\n  englishName,\n  nameOnReceipt,\n  description: 'testing description',\n  price: '10'\n});\nproductItemsPage.assertPackageExists(englishName);",
+              "err": {},
+              "uuid": "7f407957-6ffe-4429-a0bd-bb4d058f6f1b",
+              "parentUUID": "842a9e40-c3c8-4b02-9eed-ba2f66571d0d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7f407957-6ffe-4429-a0bd-bb4d058f6f1b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9193,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8f0366ac-1087-470c-b4f1-c5c2de4072d1",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Suppliers.cy.js",
+      "file": "cypress\\e2e\\Suppliers.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "31b5a64e-d2d6-4740-982c-02e7642b5367",
+          "title": "Suppliers Management",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should allow a user to add a new supplier",
+              "fullTitle": "Suppliers Management should allow a user to add a new supplier",
+              "timedOut": null,
+              "duration": 10884,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const suppliersPage = new _SuppliersPage.default();\nsuppliersPage.visit();\nsuppliersPage.login('demo@marn.com.sa', 'Test@123');\nsuppliersPage.openSuppliersTab();\nsuppliersPage.addSupplier('tes', '+966523124567', 'e@d.com');\ncy.get('.mb-2').should('have.text', ' Suppliers ');",
+              "err": {},
+              "uuid": "2271faf4-6d90-42e1-8336-ae8f3721e7f9",
+              "parentUUID": "31b5a64e-d2d6-4740-982c-02e7642b5367",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2271faf4-6d90-42e1-8336-ae8f3721e7f9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10884,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "5ee0e093-130e-4df5-a326-e381b45546eb",
+      "title": "",
+      "fullFile": "cypress\\e2e\\AddCars.cy.js",
+      "file": "cypress\\e2e\\AddCars.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "46305153-e965-4620-a11a-5c99ee2abd72",
+          "title": "Car Registration",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should allow a user to add a new car with valid details",
+              "fullTitle": "Car Registration should allow a user to add a new car with valid details",
+              "timedOut": null,
+              "duration": 9861,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const addCarsPage = new _AddCarsPage.default();\ncy.fixture('Credentials').then(data => {\n  addCarsPage.visit();\n  addCarsPage.login(data.email, data.password);\n  addCarsPage.openAddCarForm();\n  const registrationNumber = generateRandomText(4);\n  const vin = generateRandomVIN();\n  addCarsPage.fillCarDetails({\n    phone: '+966512345678',\n    registrationNumber,\n    make: 'BMW',\n    year: '2001',\n    engine: 'engine',\n    capacity: '4 ltrs',\n    code: '2345',\n    vin\n  });\n  addCarsPage.submit();\n  addCarsPage.assertCarAdded();\n});",
+              "err": {},
+              "uuid": "ee313e0b-0f50-4c90-a05b-8b1b870dff20",
+              "parentUUID": "46305153-e965-4620-a11a-5c99ee2abd72",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should show required field errors when submitting empty form",
+              "fullTitle": "Car Registration should show required field errors when submitting empty form",
+              "timedOut": null,
+              "duration": 4192,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const addCarsPage = new _AddCarsPage.default();\ncy.fixture('Credentials').then(data => {\n  addCarsPage.visit();\n  addCarsPage.login(data.email, data.password);\n  addCarsPage.openAddCarForm();\n  addCarsPage.assertRequiredFieldErrors();\n});",
+              "err": {},
+              "uuid": "066b568b-3521-4c6c-8779-e8b5e7ef7e65",
+              "parentUUID": "46305153-e965-4620-a11a-5c99ee2abd72",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ee313e0b-0f50-4c90-a05b-8b1b870dff20",
+            "066b568b-3521-4c6c-8779-e8b5e7ef7e65"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14053,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
