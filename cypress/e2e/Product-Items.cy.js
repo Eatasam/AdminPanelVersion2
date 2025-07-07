@@ -7,6 +7,11 @@ Cypress.on('uncaught:exception', (err) => {
   return false;
 });
 
+Cypress.on('fail', (error, runnable) => {
+  cy.screenshot();
+  throw error;
+});
+
 function generateRandomText(length) {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let result = '';

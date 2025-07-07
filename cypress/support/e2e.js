@@ -21,6 +21,10 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   // returning false prevents Cypress from failing the test
   return false;
 });
+Cypress.on('fail', (error, runnable) => {
+  cy.screenshot();
+  throw error;
+});
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
